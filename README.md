@@ -2,9 +2,9 @@
 
 As part of my master’s thesis, I developed a differential fuzzing framework for the RPKI Repository Delta Protocol (RRDP) to identify security weaknesses and behavioral inconsistencies in RPKI validator implementations.
 
-RRDP uses XML documents, including notification.xml and snapshot.xml, to distribute RPKI repository data to validators. I generated and mutated these XML files using structure-aware test cases and XML security-testing techniques, then supplied the crafted inputs to multiple RPKI validators.
+RRDP uses XML documents, notification.xml, snapshot.xml, and delta.xml files to distribute RPKI repository data to validators. I generated and mutated these XML files (only notification.xml and snapshot.xml) using structure-aware mutation for XML security-testing techniques, then supplied the crafted inputs to multiple RPKI validators.
 
-The framework compared how different validators processed the same inputs by analyzing acceptance or rejection behavior, generated routing data, error logs, and fallback behavior. This allowed me to identify implementation differences and security-relevant edge cases that could affect the reliability of RPKI validation.
+The framework compared how different validators processed the same inputs by analyzing acceptance or rejection behavior, generated routing data, error logs, and fallback behavior. This allowed me to identify implementation differences and security-relevant edge cases that could affect the availability of Internet Routing Security System.
 
 #####Workflow
 
